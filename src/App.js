@@ -2,6 +2,13 @@ import Card from './components/Card'
 import Header from './components/Header'
 import Drawer from './components/Drawer'
 
+const arr =[
+  { title: 'Кроссовки Nike Blazer Mid Suede', price: 12999, imgUrl: '/img/sneakers/1.jpg'},
+  { title: 'Кроссовки Nike Air Max 270', price: 15600, imgUrl: '/img/sneakers/2.jpg'},
+  { title: 'Кроссовки Nike Blazer Mid Suede', price: 8499, imgUrl: '/img/sneakers/3.jpg'},
+  { title: 'Кроссовки Puma x Aka Boku Future Rider', price: 8999, imgUrl: '/img/sneakers/6.jpg'},
+];
+
 function App() {
   return(
     <div className = "wrapper" >
@@ -21,46 +28,13 @@ function App() {
 
 
 <div className="Sneakers">
-       <Card />
-<div className="card">
-  <img className="crossimg" width={133} height={123} src="/img/Sneakers/2.jpg" alt="Sneakers"/>
-  <p>Кроссовки Vans Sk8-Hi MTE-2</p>
-  <div className="m1">
-    <div className="m2">
-      <span>Цена:</span>
-      <b>12 999 руб.</b>
-    </div>
-    <button className="button">
-      <img width={11} height={11} src="/img/plus.svg" alt="Plus"/>
-    </button>
-  </div>
-</div>
-<div className="card">
-  <img className="crossimg" width={133} height={123} src="/img/Sneakers/3.jpg" alt="Sneakers"/>
-  <p>Кроссовки Vans Sk8-Hi MTE-2</p>
-  <div className="m1">
-    <div className="m2">
-      <span>Цена:</span>
-      <b>12 999 руб.</b>
-    </div>
-    <button className="button">
-      <img width={11} height={11} src="/img/plus.svg" alt="Plus"/>
-    </button>
-  </div>
-</div>
-<div className="card">
-  <img className="crossimg" width={133} height={123} src="/img/Sneakers/6.jpg" alt="Sneakers"/>
-  <p>Мужские кроссовки Nike Blazer Mid Suede</p>
-  <div className="m1">
-    <div className="m2">
-      <span>Цена:</span>
-      <b>12 999 руб.</b>
-    </div>
-    <button className="button">
-      <img width={11} height={11} src="/img/plus.svg" alt="Plus"/>
-    </button>
-  </div>
-</div>
+
+  {arr.map((obj) => (
+    <Card
+    title={obj.title}
+    price={obj.price}
+    imgUrl={obj.imgUrl} />
+  ))}
 </div>
 </div>
 </div>
