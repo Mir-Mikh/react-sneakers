@@ -11,11 +11,14 @@ function Header(props) {
       </div>
       <ul className="headerRight">
         <li onClick={props.onClickCart}>
-          <img width={18} height={18} src="/img/cart.svg" alt="Cart" />
+          <img width={18} height={18} src="/img/cart.svg" alt="Корзина" />
           <span>1205 руб.</span>
         </li>
         <li>
-          <img width={18} height={18} src="/img/user.svg" alt="User" />
+          <img width={18} height={18} src="/img/heart.svg" alt="Закладки" />
+        </li>
+        <li>
+          <img width={18} height={18} src="/img/user.svg" alt="Пользователь" />
         </li>
       </ul>
     </header>
